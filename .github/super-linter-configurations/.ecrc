@@ -1,0 +1,12 @@
+{
+  "Verbose": false,
+  "Debug": false,
+  "IgnoreDefaults": false,
+  "SpacesAftertabs": false,
+  "NoColor": false,
+  "exclude": [
+    "scripts/2_code_limit/script.py"
+  ],
+  "AllowedContentTypes": [],
+  "PassedFiles": []
+}

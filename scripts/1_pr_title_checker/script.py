@@ -4,6 +4,7 @@
 # ///
 from pathlib import Path
 
+
 def check_file_exists(file_path: str) -> bool:
     try:
         file = Path(file_path)
@@ -21,7 +22,7 @@ def update_pr_title_checker(file_path: str) -> bool:
 
         # Transform the content
         transformed_content = transform_file(content)
-    
+
         with open(file_path, "w") as file:
             # Save the transformed content back to the file
             file.write(transformed_content)
