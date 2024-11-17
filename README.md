@@ -1,0 +1,1 @@
+uv run scripts/1_pr_title_checker/script.py
