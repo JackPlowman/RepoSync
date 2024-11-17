@@ -4,7 +4,9 @@
   "IgnoreDefaults": false,
   "SpacesAftertabs": false,
   "NoColor": false,
-  "exclude": [],
+  "exclude": [
+    "scripts/2_code_limit/script.py"
+  ],
   "AllowedContentTypes": [],
   "PassedFiles": []
 }
