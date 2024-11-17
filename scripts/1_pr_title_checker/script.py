@@ -2,35 +2,48 @@
 # requires-python = ">=3.13"
 # dependencies = []
 # ///
+from pathlib import Path
 
-def update_pr_title_checker(file_path: str) -> bool:
+def check_file_exists(file_path: str) -> bool:
     try:
-        # Load the file
-        with open(file_path, 'r') as file:
-            content = file.read()
-        # Transform the content
-        transformed_content = transform_file(content)
-        # Save the transformed content back to the file
-        with open(file_path, 'w') as file:
-            file.write(transformed_content)
-        return True
+        file = Path(file_path)
+        return file.exists()
     except Exception:
         return False
 
+
+def update_pr_title_checker(file_path: str) -> bool:
+    try:
+        # Open the file in write mode
+        with open(file_path, "r") as file:
+            # Read the content of the file
+            content = file.read()
+
+        # Transform the content
+        transformed_content = transform_file(content)
+    
+        with open(file_path, "w") as file:
+            # Save the transformed content back to the file
+            file.write(transformed_content)
+            return True
+    except Exception:
+        return False
+
+
 def transform_file(content: str) -> str:
-    content_str = str(content)
-    content_str = content_str.replace("check-pr-title", "check-pull-request-title")
-    content_str = content_str.replace("Check PR title", "Check Pull Request title")
-    content_str = content_str.replace(
-        "\"feat: ,fix: ,bug: ,ci: ,refactor: ,docs: ,build: ,chore(,deps(,chore: ,feat!: ,fix!: ,refactor!: ,test: \"",
-        "\"feat: ,fix: ,bug: ,ci: ,refactor: ,docs: ,build: ,chore(,deps(,chore: ,feat!: ,fix!: ,refactor!: ,test: ,build(deps): \""
+    content = content.replace("check-pr-title", "check-pull-request-title")
+    content = content.replace("Check PR title", "Check Pull Request title")
+    content = content.replace(
+        '"feat: ,fix: ,bug: ,ci: ,refactor: ,docs: ,build: ,chore(,deps(,chore: ,feat!: ,fix!: ,refactor!: ,test: "',
+        '"feat: ,fix: ,bug: ,ci: ,refactor: ,docs: ,build: ,chore(,deps(,chore: ,feat!: ,fix!: ,refactor!: ,test: ,build(deps): "',
     )
+    return content
 
 
 files_paths_to_update = [
     ".github/workflows/pull-request-tasks.yml",
     ".github/workflows/pull-request-checks.yml",
+    ".github/workflows/pull-request-check.yml",
 ]
-for file_path in files_paths_to_update:
-    if update_pr_title_checker(file_path):
-        break
+file_to_update = [file for file in files_paths_to_update if check_file_exists(file)][0]
+update_pr_title_checker(file_to_update)
