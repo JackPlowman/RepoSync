@@ -31,7 +31,7 @@
   name: wontfix
   description: The issue is expected and will not be fixed
 # Languages
- color: 2b67c6
+- color: 2b67c6
   name: python
   description: Pull requests that update Python code
 - color: 000000
