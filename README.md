@@ -1,1 +1,10 @@
-uv run scripts/1_pr_title_checker/script.py
+# Repo Sync
+
+A project to store all scripts used to sync repositories.
+
+## Tools
+
+Tools used to sync repositories:
+
+- [microplane](https://github.com/Clever/microplane)
+- [turbolift](https://github.com/Skyscanner/turbolift)
