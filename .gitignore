@@ -1,1 +1,5 @@
 mp/
+scripts/*/README.md
+scripts/*/.turbolift
+scripts/*/.gitignore
+scripts/*/work

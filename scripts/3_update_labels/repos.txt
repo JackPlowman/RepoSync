@@ -1,0 +1,18 @@
+# List repositories to be operated upon in this file, one repo per line. e.g.
+# org/repo1
+# org/repo2
+
+JackPlowman/github-pr-analyser
+JackPlowman/python-practice
+JackPlowman/tech-radar
+JackPlowman/screenshot_mailinator_email
+JackPlowman/development-environment
+JackPlowman/source_scan
+JackPlowman/RepoSync
+JackPlowman/github-stats-analyser
+JackPlowman/create-repository-tasks
+JackPlowman/project-status-checker
+JackPlowman/GitHubPulse
+JackPlowman/github-stats
+JackPlowman/status-sentinel
+JackPlowman/pr-proofreader
