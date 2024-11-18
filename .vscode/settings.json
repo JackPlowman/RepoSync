@@ -24,5 +24,6 @@
     "**/.pytest_cache": true,
     ".coverage": true,
     "coverage.xml": true
-  }
+  },
+  "explorer.excludeGitIgnore": true
 }
