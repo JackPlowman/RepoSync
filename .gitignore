@@ -1,5 +1,6 @@
 mp/
 scripts/*/README.md
 scripts/*/.turbolift
+scripts/*/.turbolift_previous_results
 scripts/*/.gitignore
 scripts/*/work
