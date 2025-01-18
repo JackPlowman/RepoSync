@@ -42,6 +42,23 @@ jobs:
           VALIDATE_PYTHON_PYINK: false
           VALIDATE_NATURAL_LANGUAGE: false
 
+  check-markdown-links:
+    name: Check Markdown links
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Check Markdown links
+        uses: UmbrellaDocs/action-linkspector@v1.2.4
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          config_file: .github/other-configurations/.linkspector.yml
+          reporter: github-pr-review
+          fail_on_error: true
+          filter_mode: nofilter
+
   run-zizmor:
     name: Check GitHub Actions with zizmor
     runs-on: ubuntu-latest
