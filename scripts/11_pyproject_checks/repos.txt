@@ -1,0 +1,9 @@
+JackPlowman/screenshot_mailinator_email
+JackPlowman/python-practice
+JackPlowman/repo-overseer
+JackPlowman/repo_standards_validator
+JackPlowman/status-sentinel
+JackPlowman/source_scan
+JackPlowman/github-stats
+JackPlowman/github-stats-analyser
+JackPlowman/project-status-checker
