@@ -4,3 +4,8 @@ scripts/*/.turbolift
 scripts/*/.turbolift_previous_results
 scripts/*/.gitignore
 scripts/*/work
+archived-scripts/*/README.md
+archived-scripts/*/.turbolift
+archived-scripts/*/.turbolift_previous_results
+archived-scripts/*/.gitignore
+archived-scripts/*/work
