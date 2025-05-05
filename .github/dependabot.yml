@@ -5,9 +5,8 @@ updates:
     directories:
       - "/"
     schedule:
-      interval: "daily"
-      time: "01:00"
-      timezone: "Europe/London"
+      interval: "cron"
+      cronjob: "30 7 * * *"
     target-branch: "main"
     groups:
       github-actions:
