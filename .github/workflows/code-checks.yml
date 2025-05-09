@@ -51,6 +51,7 @@ jobs:
         uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
+          persist-credentials: false
       - name: Check Markdown links
         uses: UmbrellaDocs/action-linkspector@a0567ce1c7c13de4a2358587492ed43cab5d0102 # v1.3.4
         with:
