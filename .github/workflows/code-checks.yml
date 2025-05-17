@@ -24,7 +24,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      # Lint and Format everything but Python
       - name: Lint Code Base
         uses: super-linter/super-linter@12150456a73e248bdc94d0794898f94e23127c88 # v7.4.0
         env:
