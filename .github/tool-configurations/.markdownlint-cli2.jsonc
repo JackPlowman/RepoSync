@@ -2,6 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/refs/heads/main/schema/markdownlint-cli2-config-schema.json",
   // Linter rules doc:
   // - https://github.com/DavidAnson/markdownlint
+  "ignores": [
+    "archived-scripts/**",
+    "scripts/**"
+  ],
   "config": {
     // ###############
     // # Rules by id #
