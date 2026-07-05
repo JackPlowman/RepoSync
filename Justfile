@@ -106,7 +106,7 @@ prek-update:
 
 # Prek update hooks
 prek-update-hooks:
-    prek autoupdate
+    prek autoupdate --freeze
 
 prek-update-additional-dependencies:
     uv run --script https://raw.githubusercontent.com/JackPlowman/update-prek-additional-dependencies/refs/heads/main/update_prek_additional_dependencies.py
@@ -119,4 +119,3 @@ prek-update-additional-dependencies:
 update:
     just pinact-update
     just prek-update
-    just prek-update-additional-dependencies
